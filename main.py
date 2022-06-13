@@ -19,6 +19,9 @@ with open('data.json') as json_file:
         print("profitpercentage = ", profitpercentage)
         print("perishability = ", perishability)
         print("OPEX = ", OPEX)
+        
+        print("---------------------------------------------------------------")
+        
         if perishability == 0:
             perishability = 1
 
@@ -26,23 +29,23 @@ with open('data.json') as json_file:
         pricewithprofit = cost + ( ( profitpercentage * cost ) / 100 )
         wrtperishability = pricewithprofit / (inventory - (inventory - sellthrough))
         
-        print(pricewithprofit)
+        print("Price With profit : ", pricewithprofit)
 
-        print(wrtperishability)
+        print("Price W.R.T Perishability : ",wrtperishability)
         
         Sprice = (pricewithprofit - wrtperishability)
-        intSprice = int(pricewithprofit - wrtperishability)
-        print(Sprice)
-        print(intSprice)
+        intSprice = int(Sprice)
+        print("Sprice : ", Sprice)
+        print("int Sprice : ", intSprice)
 
         manufacturingCost = inventory * cost
         print("Manufacturing : ", manufacturingCost )
         retSP = inventory * Sprice
-        print("Selling ", retSP)
+        print("Selling : ", retSP)
         totalProfit = retSP - manufacturingCost
         print("Total Profit : ", totalProfit)
 
-print("--------------------------------------------------------")
+print("---------------------------------------------------------------")
 
 
 
