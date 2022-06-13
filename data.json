@@ -1,0 +1,22 @@
+{
+    "item1": [
+        {
+            "cost": 888,
+            "inventory": 50,
+            "sellthrough": 10,
+            "profitpercentage": 30,
+            "perishability": 0,
+            "OPEX": 8
+        }
+    ],
+    "item2": [
+        {
+            "cost": 20,
+            "inventory": 100,
+            "sellthrough": 5,
+            "profitpercentage": 10,
+            "perishability": 2,
+            "OPEX": 7
+        }
+    ]
+}
