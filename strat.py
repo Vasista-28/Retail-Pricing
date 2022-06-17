@@ -40,4 +40,5 @@ def strat1(Sprice):
     a = Sprice + x
     print("Final Price : ", a)
 
-
+def strat2(Sprice):
+    return Sprice
