@@ -1,3 +1,5 @@
+import webbrowser
+import time
 from main import Sprice, intSprice
 
 print("Sprice : ", Sprice)
@@ -9,12 +11,12 @@ print("int Sprice: ", intSprice)
 num_str = repr(intSprice)
 last_digit_str = num_str[-1]
 last_digit = int(last_digit_str)
+if Sprice > 500:
+    x = 9 - int(last_digit_str)
+    global a
+    a = Sprice + x
 
-x = 9 - int(last_digit_str)
-a = Sprice + x
-
-print("Final Price : ", a)
-
+    print("Final Price : ", a)
 # if last_digit_str == "8":
 #     print( a )
 # elif last_digit_str == "7":
@@ -32,13 +34,19 @@ print("Final Price : ", a)
 # elif last_digit_str == "1":
 #     print(Sprice+8)
 
-def strat1(Sprice):
-    num_str = repr(intSprice)
-    last_digit_str = num_str[-1]
-    last_digit = int(last_digit_str)
-    x = 9 - int(last_digit_str)
-    a = Sprice + x
-    print("Final Price : ", a)
+# def strat1(Sprice):
+#     num_str = repr(intSprice)
+#     last_digit_str = num_str[-1]
+#     last_digit = int(last_digit_str)
+#     if Sprice > 500:
+#         x = 9 - int(last_digit_str)
+#         a = Sprice + x
+#         print("Final Price : ", a)
 
-def strat2(Sprice):
-    return Sprice
+html_content = f"<html> <head> </head> <hl> {a} </h1> <body> </body> </html>"
+    
+with open("index.html", "w") as html_file:
+    html_file.write(html_content)
+    print("Html file created successfully !!")
+time.sleep(2)
+webbrowser.open_new_tab("index.html")

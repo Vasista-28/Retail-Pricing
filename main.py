@@ -4,9 +4,9 @@ import json
 with open('data.json') as json_file:
     data = json.load(json_file)
 
-    print("Data of ITEM 1 : ", data['item1'][0])
+    print("Data of ITEM 1 : ", data['item2'][0])
     print("\nPrinting nested dictionary as a key-value pair\n")
-    for i in data['item1']:
+    for i in data['item2']:
         inventory = i['inventory']
         cost = i['cost']
         OPEX = i['OPEX']
@@ -22,18 +22,24 @@ with open('data.json') as json_file:
         
         print("---------------------------------------------------------------")
         
-        if perishability == 0:
-            perishability = 1
+        # if perishability == 0:
+            # perishability = 1
 
-        m = (((cost+OPEX) / inventory ) * perishability )
-        pricewithprofit = cost + ( ( profitpercentage * cost ) / 100 )
-        wrtperishability = pricewithprofit / (inventory - (inventory - sellthrough))
+        # m = (((cost+OPEX) / inventory ) * perishability )
+        # wrtperishability = pricewithprofit / (inventory - (inventory - sellthrough))
         
+
+        # print("Price W.R.T Perishability : ",wrtperishability)
+        
+        pricewithprofit = (cost+OPEX) + ( ( profitpercentage * cost ) / 100 )
+        quantity = inventory - sellthrough
+        spoilage =  quantity * (perishability/100)
+        SPriceofPerishable = pricewithprofit / (quantity - spoilage)
+
         print("Price With profit : ", pricewithprofit)
 
-        print("Price W.R.T Perishability : ",wrtperishability)
-        
-        Sprice = (pricewithprofit - wrtperishability)
+
+        Sprice = (pricewithprofit - SPriceofPerishable)
         intSprice = int(Sprice)
         print("Sprice : ", Sprice)
         print("int Sprice : ", intSprice)
@@ -44,6 +50,9 @@ with open('data.json') as json_file:
         print("Selling : ", retSP)
         totalProfit = retSP - manufacturingCost
         print("Total Profit : ", totalProfit)
+        print("Quantity = ", quantity)
+        print("Spoilage = ", spoilage)
+        print("Removed Perishable Price = ", SPriceofPerishable)
 
 print("---------------------------------------------------------------")
 
