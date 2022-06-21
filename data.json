@@ -5,7 +5,7 @@
             "inventory": 50,
             "sellthrough": 10,
             "profitpercentage": 30,
-            "perishability": 0,
+            "perishability": 10,
             "OPEX": 8
         }
     ],
