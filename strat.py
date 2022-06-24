@@ -15,8 +15,10 @@ if Sprice > 500:
     x = 9 - int(last_digit_str)
     global a
     a = Sprice + x
+    print("Final Price : ", int(a))
 
-    print("Final Price : ", a)
+else:
+    print("Final Price : ", int(Sprice))
 # if last_digit_str == "8":
 #     print( a )
 # elif last_digit_str == "7":
@@ -43,10 +45,10 @@ if Sprice > 500:
 #         a = Sprice + x
 #         print("Final Price : ", a)
 
-html_content = f"<html> <head> </head> <hl> {a} </h1> <body> </body> </html>"
+# html_content = f"<html> <head> </head> <hl> {a} </h1> <body> </body> </html>"
     
-with open("index.html", "w") as html_file:
-    html_file.write(html_content)
-    print("Html file created successfully !!")
-time.sleep(2)
-webbrowser.open_new_tab("index.html")
+# with open("index.html", "w") as html_file:
+#     html_file.write(html_content)
+#     print("Html file created successfully !!")
+# time.sleep(2)
+# webbrowser.open_new_tab("index.html")

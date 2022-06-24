@@ -4,9 +4,9 @@ import json
 with open('data.json') as json_file:
     data = json.load(json_file)
 
-    print("Data of ITEM 1 : ", data['item2'][0])
+    print("Data of ITEM 1 : ", data['item1'][0])
     print("\nPrinting nested dictionary as a key-value pair\n")
-    for i in data['item2']:
+    for i in data['item1']:
         inventory = i['inventory']
         cost = i['cost']
         OPEX = i['OPEX']
