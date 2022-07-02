@@ -1,12 +1,7 @@
-from nose.tools import assert_is_not_none
+from unittest import result
+import requests
+result = requests.get("https://mocki.io/v1/9ccc0559-f08c-438c-95c0-82bb6363f037")
+# print(result.status_code)
+# print(result.text)
 
-# Local imports...
-from project.services import get_todos
-
-
-def test_request_response():
-    # Call the service, which will send a request to the server.
-    response = get_todos()
-
-    # If the request is sent successfully, then I expect a response to be returned.
-    assert_is_not_none(response)
+print(result.json())
