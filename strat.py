@@ -16,7 +16,7 @@ if Sprice > 500:
     global a
     a = Sprice + x
     print("Final Price : ", int(a))
-
+    
 else:
     print("Final Price : ", int(Sprice))
 # if last_digit_str == "8":
