@@ -10,12 +10,14 @@ with open('data1.json') as json_file:
     # print(data)
     l = len(data)
     print("Data Length = ",l)
+    print("Printing nested dictionary as a key-value pair") 
+
     for i in range(l):
-        print("Data of ITEM ", i , " : ", data[i])
+        print("Data of ITEM ", i + 1 , " : ", data[i])
         print("---------------------------------------------------------------")
 
     
-    # print("\nPrinting nested dictionary as a key-value pair\n") 
+
     for i in data:
         inventory = i["inventory"]
         cost = i['cost']
