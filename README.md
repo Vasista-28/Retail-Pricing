@@ -4,6 +4,9 @@ Imported JSON data to python file
 
 Calculated Base Retail Selling Price using Cost, Inventory, SellThrough, Profit, Perisshability, Operational Expenses.
 
+(data1.json is for FINAL_MAIN.py)
+(data.json is for main.py, strat.py)
+
 Implemented Emotional Pricing strategy (Price ends with 9 for which most people are attracted to).
 
 Finally, Created two different models
