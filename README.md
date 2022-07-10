@@ -26,6 +26,6 @@ Use FINAL_MAIN.py - print final price of all vales one by one on IDE screen
 
 ![output](https://user-images.githubusercontent.com/52853755/178155271-c3aa91a9-02af-47fd-a294-f270a6a38e2f.png)
 
-Prints all the values on the IDE Screen
+This model prints all the values on the IDE Screen
 
 ...................................................................................................................................
