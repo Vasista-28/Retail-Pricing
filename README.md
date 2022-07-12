@@ -19,7 +19,7 @@ Use main.py, strat.py, and flaskfile.py - Print the final price of each value (o
 
 ![output](https://user-images.githubusercontent.com/52853755/178398256-74f02922-5277-4434-b450-6e26968876cb.png)
 
-![output](https://user-images.githubusercontent.com/52853755/178398155-22b66a2f-8002-4e2e-b9f0-12c005477d1c.png)
+![output](https://user-images.githubusercontent.com/52853755/178440087-5fdd65c8-238a-4132-ba11-bb0e31e1cb32.png)
 
 
 
