@@ -1,7 +1,7 @@
 {
     "item1": [
         {
-            "cost": 888,
+            "cost": 880,
             "inventory": 50,
             "sellthrough": 10,
             "profitpercentage": 30,
