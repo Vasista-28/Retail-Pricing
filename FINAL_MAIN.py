@@ -71,9 +71,15 @@ with open('data1.json') as json_file:
             global a
             a = Sprice + x
             print("Final Price : ", int(a))
+
             
         else:
             print("Final Price : ", int(Sprice))
+
+            # print("a = ", a)
+            # x = ((a / pricewithprofit)*100)
+            # discountpercent = 100-x
+            # print(" Discount percentage : ", discountpercent)
         print("---------------------------------------------------------------")
         print("---------------------------------------------------------------")
         print("---------------------------------------------------------------")
