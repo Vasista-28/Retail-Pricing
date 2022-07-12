@@ -22,14 +22,6 @@ with open('data.json') as json_file:
         
         print("---------------------------------------------------------------")
         
-        # if perishability == 0:
-            # perishability = 1
-
-        # m = (((cost+OPEX) / inventory ) * perishability )
-        # wrtperishability = pricewithprofit / (inventory - (inventory - sellthrough))
-        
-
-        # print("Price W.R.T Perishability : ",wrtperishability)
         
         pricewithprofit = (cost+OPEX) + ( ( profitpercentage * cost ) / 100 )
         quantity = inventory - sellthrough
@@ -53,6 +45,12 @@ with open('data.json') as json_file:
         print("Quantity = ", quantity)
         print("Spoilage = ", spoilage)
         print("Removed Perishable Price = ", SPriceofPerishable)
+
+        import strat
+        print("imported : ", strat.a)
+        discountpercent = ((strat.a / pricewithprofit)*100)
+        print(" Discount percentage : ", discountpercent)
+
 
 print("---------------------------------------------------------------")
 
@@ -82,7 +80,6 @@ print("---------------------------------------------------------------")
 #     for i in range(l):
 #         print("Data of ITEM ", i , " : ", data[i])
     
-#     # print("\nPrinting nested dictionary as a key-value pair\n") 
 #     for i in data:
 #         inventory = i["inventory"]
 #         cost = i['cost']
