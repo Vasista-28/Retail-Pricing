@@ -33,6 +33,8 @@ Use FINAL_MAIN.py - prints the final price of all values one by one on the IDE s
 
 ![data](https://user-images.githubusercontent.com/52853755/178398685-ace6e2bc-c5a2-48a8-b04d-4ec1aa524918.png)
 
+
+
 Output for each data item:
 
 data item - 1
@@ -44,5 +46,10 @@ data item - 2
 ![image](https://user-images.githubusercontent.com/52853755/178398921-9d36efd1-d000-4830-b3a5-0866e554b61a.png)
 
 This model prints all the values on the IDE Screen
+
+
+Demo PPT:
+[Project Demo.pptx](https://github.com/Vasista-28/Retail-Pricing/files/9131100/Project.Demo.pptx)
+
 
 ...................................................................................................................................
