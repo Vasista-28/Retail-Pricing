@@ -15,7 +15,7 @@ Model 1:
 
 Use main.py, strat.py, and flaskfile.py - Print the final price of each value (one at a time) on index.html (used Flask)
 
-![image](https://user-images.githubusercontent.com/52853755/182204887-e05b4853-569c-454e-8546-bff7d75f9fae.png)
+![Output](https://user-images.githubusercontent.com/52853755/182206485-897bf5d7-f615-460b-b1d0-042218d5b67f.png)
 
 ![Output](https://user-images.githubusercontent.com/52853755/182206385-67629a4a-8c62-4ebe-acac-aae046687e66.png)
 
