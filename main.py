@@ -23,33 +23,29 @@ with open('data.json') as json_file:
         print("---------------------------------------------------------------")
         
         
-        pricewithprofit = (cost+OPEX) + ( ( profitpercentage * cost ) / 100 )
+        pricewithprofit = (cost+OPEX) + ( ( profitpercentage * (cost+OPEX) ) / 100 )
         quantity = inventory - sellthrough
         spoilage =  quantity * (perishability/100)
         SPriceofPerishable = pricewithprofit / (quantity - spoilage)
 
-        print("Price With profit : ", pricewithprofit)
+        print("MSRP : ", pricewithprofit, "Rupees")
 
 
         Sprice = (pricewithprofit - SPriceofPerishable)
         intSprice = int(Sprice)
-        print("Sprice : ", Sprice)
-        print("int Sprice : ", intSprice)
+        print("Selling price : ", round(Sprice,2), "Rupees")
+        # print("int Sprice : ", intSprice)
 
         manufacturingCost = inventory * cost
-        print("Manufacturing : ", manufacturingCost )
+        # print("Total Manufacturing Cost : ", manufacturingCost )
         retSP = inventory * Sprice
-        print("Selling : ", retSP)
         totalProfit = retSP - manufacturingCost
-        print("Total Profit : ", totalProfit)
-        print("Quantity = ", quantity)
-        print("Spoilage = ", spoilage)
-        print("Removed Perishable Price = ", SPriceofPerishable)
-
-        import strat
-        print("imported : ", strat.a)
-        discountpercent = ((strat.a / pricewithprofit)*100)
-        print(" Discount percentage : ", discountpercent)
+        # print("Total Profit : ", totalProfit)
+        print("Quantity = ", round(quantity,2), "Units")
+        print("Spoilage = ", round(spoilage,2) )
+        print("Removed Perishable Price = ", round(SPriceofPerishable,2) , "Rupees")
+        print("Total Profit : ", round(totalProfit,2), "Rupees")
+        print("Total Selling Price : ", round(retSP,2), "Rupees")
 
 
 print("---------------------------------------------------------------")
