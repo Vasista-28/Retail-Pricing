@@ -10,11 +10,13 @@ app = flask.Flask(__name__,template_folder='template')
 def index():
     # return "Hello"
     from main import pricewithprofit, Sprice
-    from strat import a
+    from strat import a1
+
     cost1 = str(pricewithprofit)
     Sprice1 = int(Sprice)
-    a1 = int(a)
-    return flask.render_template("index.html", a1=a1,Sprice=Sprice, pricewithprofit=pricewithprofit)
+    a2 = int(a1)
+
+    return flask.render_template("index.html", a1=a2,Sprice=Sprice, pricewithprofit=pricewithprofit)
     # # print("Price : ", Cost, "Discount : ", a )
     # return str(cost)
     # return str(a)
